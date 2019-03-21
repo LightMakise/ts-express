@@ -1,3 +1,7 @@
 # ts-express
+
 项目启动
-  npm run dev
+
+    npm install 
+
+    npm run dev
