@@ -1,8 +1,12 @@
 import http = require('http');
-import { AbstractController, Restful, Router,ResponseBody,AutoInject} from "ts-express-restful";
+import { AbstractController, Restful, Router,ResponseBody,Autowire} from "ts-express-restful";
 import BaseController from './base.controller';
+import TestService from '../service/test.service';
+
 @Restful('/test')
 export default class TestController extends BaseController {
+  @Autowire
+  test!: TestService
   constructor() {
     super()
   }

@@ -1,7 +1,7 @@
 {
   "name": "ts-express-middleware",
   "version": "1.0.0",
-  "description": "",
+  "description": "项目启动",
   "main": "index.js",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpileOnly ./app.ts",
@@ -14,9 +14,17 @@
     "@types/express": "^4.16.1",
     "@types/log4js": "^2.3.5",
     "express": "^4.16.4",
-    "ts-express-restful": "^3.0.0",
+    "ts-express-restful": "^4.0.1",
     "ts-node": "^8.0.3",
     "ts-node-dev": "^1.0.0-pre.32",
     "typescript": "^3.3.3333"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LightMakise/ts-express.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LightMakise/ts-express/issues"
+  },
+  "homepage": "https://github.com/LightMakise/ts-express#readme"
 }

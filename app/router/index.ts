@@ -6,7 +6,7 @@ var router = express.Router()
 /**
  * 挂载所有的 controller
  */
-scannerDecoration(path.join(__dirname,"../controller"))
+scannerDecoration(path.join(__dirname,"../"))
 /**
  * 注册路由
  */

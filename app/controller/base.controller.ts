@@ -1,4 +1,4 @@
-import { AbstractController, Restful, Router, AutoInject } from "ts-express-restful";
+import { AbstractController, Restful, Router} from "ts-express-restful";
 import {logger} from '../log/index';
 import {Logger} from 'log4js';
 import {ip,date} from '../untils/index';
