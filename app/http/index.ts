@@ -24,23 +24,23 @@ export const get = function (path: string, data?: object) {
     // console.log('options', options);
     // options.path = url.urlSerialization(path,data);
     return new Promise((resolve, reject) => {
-            var $http = http.request(options, (res: any) => {
-                // console.log('STATUS: ' + res.statusCode);
-                // console.log('HEADERS: ' + JSON.stringify(res.headers));
-                res.setEncoding('utf8');
-                res.on('data', (data: any) => {
-                    try {
-                        if (typeof data === 'string') data = JSON.parse(data)
-                        resolve(data)
-                    } catch (e) {
-                        reject(data)
-                    }
-                });
+        var $http = http.request(options, (res: any) => {
+            // console.log('STATUS: ' + res.statusCode);
+            // console.log('HEADERS: ' + JSON.stringify(res.headers));
+            res.setEncoding('utf8');
+            res.on('data', (data: any) => {
+                try {
+                    if (typeof data === 'string') data = JSON.parse(data)
+                    resolve(data)
+                } catch (e) {
+                    reject(data)
+                }
             });
-            $http.on('error', (e: any) => {
-                console.log('错误: ' + e.message);
-                reject(e)
-            });
+        });
+        $http.on('error', (e: any) => {
+            console.log('错误: ' + e.message);
+            reject(e)
+        });
         $http.end();
     })
 };

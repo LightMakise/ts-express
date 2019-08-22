@@ -4,6 +4,14 @@ import route from './app/router/index';
 import { logger } from './app/log/index';
 import { date } from './app/untils/index';
 const app: express.Application = express()
+app.all("*", function(req: any, res: any, next: any) {
+  // 允许跨域访问
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  res.header('Access-Control-Allow-Methods', '*');
+  res.header('Content-Type', 'application/json;charset=utf-8');
+  next()
+})
 /**
  * post参数解析
  */

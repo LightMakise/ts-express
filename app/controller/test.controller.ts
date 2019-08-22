@@ -30,10 +30,7 @@ export default class TestController extends BaseController {
     try {
       this.log("开始请求数据")
       this.log("请求接口:" + '/blueskydc/uat/obt/api/admin/oa/login/getToken')
-      let data = await post('/obt/wxobt/api/admin/oa/login/getToken', {
-        "appKey": "SINOCHEMTEST_H5",
-        "appSecurity": "SINOCHEMTEST20190611"
-      })
+      let data = await post('/obt/wxobt/api/admin/oa/login/getToken', this.params)
       this.log(`请求完成 获取数据:`)
       this.log(`${JSON.stringify(data)}`)
       return this.reply(this.SUCCESS, data)
