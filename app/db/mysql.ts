@@ -15,11 +15,11 @@ export default class mysqlDB{
   }
   setConfig() {
     this.db = mysql.createConnection({
-      host: '172.29.255.99', // 数据库地址
-      user: 'admin', // 数据库名
-      password: '123456', // 数据库密码
-      port: 3306, // 端口号
-      database: 'db' // 使用数据库名字
+      host: '172.29.255.99',  // 数据库地址
+      user: 'admin',          // 数据库名
+      password: '123456',     // 数据库密码
+      port: 3306,             // 端口号
+      database: 'db'          // 使用数据库名字
     })
   }
   query(sql:string,arg?:any) {

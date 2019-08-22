@@ -23,11 +23,11 @@ app.use(function (err: any, req: any, res: any, next: any) {
  */
 app.get('*', function (req, res) {
   console.log('404 handler..')
+  res.send('404')
 });
 
 app.listen(3000, function () {
   logger.info("*****************************************")
   logger.info("开启时间:", date.now('yyyy-mm-dd HH:ii:ss'))
   logger.info("*****************************************")
-  console.log("项目运行于3000端口");
 })
