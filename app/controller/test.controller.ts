@@ -29,7 +29,7 @@ export default class TestController extends BaseController {
   async getToken(ctx: any) {
     try {
       this.log("开始请求数据")
-      this.log("请求接口:" + '/blueskydc/uat/obt/api/admin/oa/login/getToken')
+      this.log("请求接口:" + '/obt/wxobt/api/admin/oa/login/getToken')
       let data = await post('/obt/wxobt/api/admin/oa/login/getToken', this.params)
       this.log(`请求完成 获取数据:`)
       this.log(`${JSON.stringify(data)}`)
